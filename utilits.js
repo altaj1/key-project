@@ -22,17 +22,20 @@ return alphabet;
 
 function setBackgtoundColoor(id){
     const findID = document.getElementById(id.toString());
-    console.log(id)
     const setColor = findID.style.backgroundColor = "blue";
-    
-   
-
 }
 function removeBackgtoundColoor(id){
     const findID = document.getElementById(id.toString());
-    console.log(id)
     const setColor = findID.style.backgroundColor = "";
-
     return setColor;
-
+}
+function getTextElementById(elementId){
+    const element = document.getElementById(elementId);
+    const elementValueText = element.innerText;
+    const value = parseInt(elementValueText);
+    return value;
+}
+function setTextElementValueById(elementId, value){
+    const element = document.getElementById(elementId);
+    element.innerText = value;
 }

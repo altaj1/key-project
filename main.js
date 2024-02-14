@@ -1,20 +1,29 @@
+document.addEventListener("keyup",(event)=>{
+   const pressKey = event.key;
+   const currentAlphabetElement = document.getElementById("showDisplye");
+   const curreAlphabet = currentAlphabetElement.innerHTML;
+   const expectedAlphabet = curreAlphabet.toLowerCase();
+
+   if(pressKey == expectedAlphabet){
+    console.log("you got a point");
+    const currentScore = getTextElementById("current-score");
+     const updateScore = currentScore + 1;
+    setTextElementValueById("current-score", updateScore);
+    continueGame()
+    removeBackgtoundColoor(expectedAlphabet)
+   }
+   
+
+})
 function enterGameFun(){
     addClass("landingPageID");
     removeClass("secendPageID");
-    // continueGame()
-      setInterval(function (){
-        const id = continueGame();
-        console.log(id)
-        removeBackgtoundColoor(id)
-      }, 2000);
+    continueGame()
+
 }
 function continueGame (){
     const alphabet = gnaretRandomAlphabet();
-     console.log("this sdahdaikhr",alphabet)
     const findDispely = document.getElementById("showDisplye");
-    
     findDispely.innerText = alphabet;
-    setBackgtoundColoor(alphabet);
-    return alphabet
-   
+    setBackgtoundColoor(alphabet);   
 }
