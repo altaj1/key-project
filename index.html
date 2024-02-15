@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-800">
     <div class=" ">
         <main class="bg-[url('./images/background.png')] min-h-screen bg-no-repeat bg-center ">
             <!--landing page  -->
@@ -85,6 +85,20 @@
     
                     </div>
             </div>
+
+            <!-- playground end -->
+        <!-- final Score start -->
+        <section id="final-score" class="flex justify-center items-center min-h-screen hidden">
+            <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+                <h4 class="text-3xl">Game Over !</h4>
+                <h1 class="text-8xl">
+                    <span class="font-extrabold">Score:</span>
+                    <span id="last-score">14</span>
+                </h1>
+                <button onclick="enterGameFun()" class="btn">Play Again</button>
+                <p>Practice will make you a Pro</p>
+            </div>
+        </section> 
         </main>
     </div>
     <script src="./utilits.js"></script>
